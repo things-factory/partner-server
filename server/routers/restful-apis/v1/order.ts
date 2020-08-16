@@ -1,7 +1,7 @@
 import gql from 'graphql-tag'
-import { router } from '../router'
+import { router } from '../../restful-api-router'
 
-router.get('/api/v1/appBindings', async (context, next) => {
+router.get('/api/v1/orders', async (context, next) => {
   const { client } = context.state
 
   context.body = {
@@ -9,7 +9,7 @@ router.get('/api/v1/appBindings', async (context, next) => {
       await client.query({
         query: gql`
           query {
-            appBindings {
+            users {
               items {
                 name
                 status

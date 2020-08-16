@@ -1,7 +1,7 @@
 import Router from 'koa-router'
 
 import { jwtAuthenticateMiddleware } from '@things-factory/auth-base'
-import { GraphqlLocalClient } from './graphql-local-client'
+import { GraphqlLocalClient } from '../graphql-local-client'
 
 const debug = require('debug')('things-factory:warehouse-partner-server:graphql-api-router')
 
