@@ -32,7 +32,8 @@
   "dependencies": {
     "@things-factory/auth-ui-jwt": "^2.0.0",
     "@things-factory/oauth2-base": "^1.0.0-beta",
-    "@things-factory/shell": "*"
+    "@things-factory/shell": "*",
+    "rest-graphql": "^1.0.6"
   },
   "devDependencies": {}
 }

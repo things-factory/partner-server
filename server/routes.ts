@@ -1,4 +1,4 @@
-import { apiRouter } from './routers/api-router'
+import { restfulApiRouter, graphqlApiRouter } from './routers'
 
 process.on('bootstrap-module-history-fallback' as any, (app, fallbackOption) => {
   var paths = ['api']
@@ -6,5 +6,6 @@ process.on('bootstrap-module-history-fallback' as any, (app, fallbackOption) => 
 })
 
 process.on('bootstrap-module-route' as any, (app, routes) => {
-  app.use(apiRouter.routes())
+  app.use(graphqlApiRouter.routes())
+  app.use(restfulApiRouter.routes())
 })
