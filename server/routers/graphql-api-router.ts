@@ -1,13 +1,12 @@
 import Router from 'koa-router'
-
-import { jwtAuthenticateMiddleware } from '@things-factory/auth-base'
+import { jwtAccessTokenMiddleware } from '@things-factory/oauth2-base'
 import { GraphqlLocalClient } from '../graphql-local-client'
 
 const debug = require('debug')('things-factory:warehouse-partner-server:graphql-api-router')
 
 export const router = new Router()
 
-router.use(jwtAuthenticateMiddleware)
+router.use(jwtAccessTokenMiddleware)
 
 router.post('/api/:version/graphql', async (context, next) => {
   context.state.version = context.params.version
