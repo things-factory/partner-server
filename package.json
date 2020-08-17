@@ -1,5 +1,5 @@
 {
-  "name": "@things-factory/warehouse-partner-server",
+  "name": "@things-factory/partner-server",
   "version": "1.0.0",
   "main": "dist-server/index.js",
   "browser": "client/index.js",
@@ -7,7 +7,7 @@
   "license": "MIT",
   "author": "heartyoh",
   "scripts": {
-    "serve": "things-factory warehouse-partner-server",
+    "serve": "things-factory partner-server",
     "serve:dev": "npm run build:server && DEBUG=things-factory:* things-factory-dev",
     "start:app": "things-factory-app",
     "start:app:android": "things-factory-app --platform=android",
@@ -27,7 +27,7 @@
     "migration:run": "node ./node_modules/typeorm/cli.js migration:run",
     "migration:revert": "node ./node_modules/typeorm/cli.js migration:revert",
     "stop:dev": "kill $(lsof -t -i:3000,3001)",
-    "stop": "things-factory-stop warehouse-partner-server"
+    "stop": "things-factory-stop partner-server"
   },
   "dependencies": {
     "@things-factory/auth-ui-jwt": "^2.0.0",
