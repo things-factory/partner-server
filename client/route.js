@@ -6,5 +6,9 @@ export default function route(page) {
     case 'partner-home':
       import('./pages/home')
       return page
+
+    case 'partner-register':
+      import('./pages/partner/register')
+      return page
   }
 }

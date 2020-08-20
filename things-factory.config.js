@@ -7,6 +7,10 @@ export default {
     {
       tagname: 'partner-home',
       page: 'partner-home'
+    },
+    {
+      tagname: 'partner-register',
+      page: 'partner-register'
     }
   ],
   bootstrap

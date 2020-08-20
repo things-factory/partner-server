@@ -1,6 +1,6 @@
 import Router from 'koa-router'
 import { jwtAccessTokenMiddleware } from '@things-factory/oauth2-base'
-import { GraphqlLocalClient } from '../graphql-local-client'
+import { GraphqlLocalClient } from '../../graphql-local-client'
 
 const debug = require('debug')('things-factory:partner-server:restful-api-router')
 

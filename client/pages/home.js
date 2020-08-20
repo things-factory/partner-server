@@ -16,8 +16,10 @@ class PartnersHome extends connect(store)(PageView) {
         Create your free partner account today Everything you need to go from where you are, to where you want to be.
       </h3>
 
-      <input type="text" placeholder="Enter your email address" />
-      <input type="button" value="join now" />
+      <form action="/partner/register" accept-charset="utf-8" name="register" method="POST">
+        <input type="text" name="email" placeholder="Enter your email address" />
+        <input type="submit" value="join now" />
+      </form>
     `
   }
 

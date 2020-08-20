@@ -5,10 +5,14 @@ import { client, store, PageView } from '@things-factory/shell'
 
 class PartnerRegister extends connect(store)(PageView) {
   static get properties() {
-    return {}
+    return {
+      email: String
+    }
   }
 
   render() {
+    const email = this.email
+
     return html`
       <h2>Join the Operato Partner Program</h2>
 
@@ -16,8 +20,8 @@ class PartnerRegister extends connect(store)(PageView) {
         Create your free partner account today Everything you need to go from where you are, to where you want to be.
       </h3>
 
-      <form action="signup/register" accept-charset="utf-8" name="register" method="post">
-        <input type="text" placeholder="Enter your email address" />
+      <form action="/partner/register" accept-charset="utf-8" name="register" method="POST">
+        <input type="text" name="email" placeholder="Enter your email address" .value=${email} />
         <input type="submit" value="join now" />
       </form>
     `
@@ -83,6 +87,9 @@ class PartnerRegister extends connect(store)(PageView) {
 
   async pageUpdated(changes, lifecycle, before) {
     if (this.active) {
+      const { email } = lifecycle.params || {}
+
+      this.email = email
       /*
        * this page is activated
        */
