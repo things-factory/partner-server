@@ -1,9 +1,9 @@
 export default function route(page) {
   switch (page) {
     case '':
-      return '/home'
+      return '/partner-home'
 
-    case 'home':
+    case 'partner-home':
       import('./pages/home')
       return page
   }

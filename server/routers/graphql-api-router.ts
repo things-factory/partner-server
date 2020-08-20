@@ -8,13 +8,13 @@ export const router = new Router()
 
 router.use(jwtAccessTokenMiddleware)
 
-router.post('/api/:version/graphql', async (context, next) => {
+router.post('/graphql', async (context, next) => {
   context.state.version = context.params.version
 
   const { user, domain, version } = context.state
   const { query, variables } = context.request.body
 
-  debug('/api/:version/graphql', user, domain, version)
+  debug('/graphql', user, domain, version)
 
   context.body = {
     result: (

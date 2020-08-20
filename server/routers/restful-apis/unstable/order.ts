@@ -1,7 +1,7 @@
 import gql from 'graphql-tag'
 import { router } from '../../restful-api-router'
 
-router.get('/v2/orders', async (context, next) => {
+router.get('/unstable/orders', async (context, next) => {
   const { client } = context.state
 
   context.body = {

@@ -3,7 +3,7 @@ import gql from 'graphql-tag'
 import { connect } from 'pwa-helpers/connect-mixin.js'
 import { client, store, PageView } from '@things-factory/shell'
 
-class PartnersHome extends connect(store)(PageView) {
+class PartnerRegister extends connect(store)(PageView) {
   static get properties() {
     return {}
   }
@@ -16,8 +16,10 @@ class PartnersHome extends connect(store)(PageView) {
         Create your free partner account today Everything you need to go from where you are, to where you want to be.
       </h3>
 
-      <input type="text" placeholder="Enter your email address" />
-      <input type="button" value="join now" />
+      <form action="signup/register" accept-charset="utf-8" name="register" method="post">
+        <input type="text" placeholder="Enter your email address" />
+        <input type="submit" value="join now" />
+      </form>
     `
   }
 
@@ -102,4 +104,4 @@ class PartnersHome extends connect(store)(PageView) {
   }
 }
 
-window.customElements.define('partner-home', PartnersHome)
+window.customElements.define('partner-register', PartnerRegister)

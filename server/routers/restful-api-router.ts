@@ -9,7 +9,7 @@ export const router = new Router()
 router.use(jwtAccessTokenMiddleware)
 
 router.use(async (context, next) => {
-  context.state.version = context.params.version
+  context.state.version = context.path.split('/')[2]
   context.state.client = GraphqlLocalClient.client
 
   const { user, domain, version } = context.state
