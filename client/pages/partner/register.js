@@ -21,7 +21,10 @@ class PartnerRegister extends connect(store)(PageView) {
       </h3>
 
       <form action="/partner/register" accept-charset="utf-8" name="register" method="POST">
-        <input type="text" name="email" placeholder="Enter your email address" .value=${email} />
+        <input type="text" name="name" placeholder="Enter your organization name" .value=${name} />
+        <input type="text" name="description" .value=${name} />
+        <input type="text" name="subdomain" .value=${subdomain} />
+        <input type="email" name="email" placeholder="Enter your email address" .value=${email} />
         <input type="submit" value="join now" />
       </form>
     `

@@ -30,6 +30,7 @@ partnerSignupRouter.post('/register', async (context, next) => {
     // TODO define common function in context : redirect to subdomain eg) context.routeToSubdomain(...)
     context.redirect(`/domain/${user.domain.subdomain}/partner-home`)
   } else {
-    context.redirect(`/partner-register?email=${email}`)
+    context.redirect(`/signup?email=${email}`)
+    // context.redirect(`/partner-register?email=${email}`)
   }
 })
