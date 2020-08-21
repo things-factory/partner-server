@@ -1,6 +1,7 @@
 import { html, css, LitElement } from 'lit-element'
 import gql from 'graphql-tag'
 import { connect } from 'pwa-helpers/connect-mixin.js'
+import '@material/mwc-textfield'
 import { client, store, PageView } from '@things-factory/shell'
 
 class PartnersHome extends connect(store)(PageView) {
@@ -17,10 +18,17 @@ class PartnersHome extends connect(store)(PageView) {
       </h3>
 
       <form action="/partner/register" accept-charset="utf-8" name="register" method="POST">
+        <mwc-textfield></mwc-textfield>
         <input type="text" name="email" placeholder="Enter your email address" />
         <input type="submit" value="join now" />
       </form>
     `
+  }
+
+  firstUpdated() {
+    setTimeout(() => {
+      this.renderRoot.querySelector('mwc-textfield').focus()
+    }, 100)
   }
 
   updated(changes) {
