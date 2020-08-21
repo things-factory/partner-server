@@ -1,15 +1,15 @@
 import Router from 'koa-router'
-import koaBodyParser from 'koa-bodyparser'
 import { getRepository } from 'typeorm'
 import { User } from '@things-factory/auth-base'
 
 const debug = require('debug')('things-factory:partner-server:partner-signup-router')
 
 export const partnerSignupRouter = new Router()
-partnerSignupRouter.use(koaBodyParser())
 
 partnerSignupRouter.post('/register', async (context, next) => {
   const { email } = context.request.body || {}
+
+  debug('post:/register', context.request.body)
 
   /*
    * case new user, ...redirect to partner domain register
