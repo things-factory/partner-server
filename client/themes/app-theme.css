@@ -80,7 +80,7 @@ body {
   --button-border: var(--border-dark-color);
   --button-border-radius: var(--border-radius);
   --button-margin: var(--margin-default) var(--margin-default) var(--margin-default) 0;
-  --button-padding: var(--margin-default);
+  --button-padding: var(--padding-default);
   --button-color: var(--secondary-color);
   --button-font: normal 15px var(--theme-font);
   --button-text-transform: capitalize;

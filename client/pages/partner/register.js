@@ -6,12 +6,18 @@ import { client, store, PageView } from '@things-factory/shell'
 class PartnerRegister extends connect(store)(PageView) {
   static get properties() {
     return {
-      email: String
+      email: String,
+      subdomain: String,
+      name: String,
+      description: String
     }
   }
 
   render() {
     const email = this.email
+    const subdomain = this.subdomain
+    const name = this.email
+    const description = this.description
 
     return html`
       <h2>Join the Operato Partner Program</h2>
