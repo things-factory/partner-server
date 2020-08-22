@@ -142,7 +142,6 @@ class PartnersHome extends connect(store)(PageView) {
           <form action="/partner/register" accept-charset="utf-8" name="register" method="POST">
             <fieldset>
               <legend>operato invite ticket</legend>
-              <mwc-textfield></mwc-textfield>
               <input type="text" name="email" placeholder="Enter your email address" />
               <input type="submit" value="join now" />
             </fieldset>
@@ -154,7 +153,7 @@ class PartnersHome extends connect(store)(PageView) {
 
   firstUpdated() {
     setTimeout(() => {
-      this.renderRoot.querySelector('mwc-textfield').focus()
+      this.renderRoot.querySelector('input[type=text]').focus()
     }, 100)
   }
 
